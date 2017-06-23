@@ -6,8 +6,6 @@
     this.fullArticle = "massive string"
   };
 
-
-
   exports.Article = Article;
 
 })(this);
