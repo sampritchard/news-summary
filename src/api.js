@@ -13,9 +13,14 @@ function processRequest (e) {
     var array = [];
     for (i = 0; i < response.response.results.length; i++) {
       array.push(response.response.results[i].webTitle)
-
     }
-    div.innerHTML = array
+    var nameList = "";
+    for (i = 0; i < array.length; i++) {
+      nameList += "<li>" + array[i] + "</li>";
+    }
+
+    div.innerHTML = nameList;
+
 
   }
 }
