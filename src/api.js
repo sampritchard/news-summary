@@ -6,6 +6,7 @@ xhr.send();
 xhr.onreadystatechange = processRequest;
 
 function processRequest (e) {
+  var div = document.getElementById("headlines");
   if (xhr.readyState == 4 && xhr.status == 200) {
     var response = JSON.parse(xhr.responseText);
     // alert(response.response.results[0].webTitle);
@@ -14,6 +15,7 @@ function processRequest (e) {
       array.push(response.response.results[i].webTitle)
 
     }
-    console.log(array);
+    div.innerHTML = array
+
   }
 }
